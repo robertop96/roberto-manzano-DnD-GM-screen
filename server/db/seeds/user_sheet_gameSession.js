@@ -1,4 +1,4 @@
-const userData = require('./seed_data/users');
+const userData = require('./seed_data/01_users');
 const profileData = require('./seed_data/profiles');
 
 exports.seed = function (knex) {
@@ -10,7 +10,7 @@ exports.seed = function (knex) {
       return knex('user').insert(userData);
     })
     .then(() => {
-      return knex('profile').del();
+      return knex('sheet').del();
     })
     .then(() => {
       //insert seed entries

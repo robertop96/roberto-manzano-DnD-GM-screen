@@ -1,0 +1,58 @@
+@import '../../partials/partials';
+@include font-list;
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $wizard-red;
+  min-height: 5rem;
+  &__logo {
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      width: auto;
+      margin-top: 1rem;
+      padding-right: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid white;
+      @include tablet {
+        margin-left: 2rem;
+        margin-top: 0;
+      }
+    }
+    &--img {
+      width: 45px;
+      height: 45px;
+      margin-right: 1rem;
+    }
+    &--text {
+      font-family: eaves;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 1px 1px 0px $cleric-white;
+    }
+  }
+  &__list {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: nodesto;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @include tablet {
+      flex-basis: 0;
+      margin-left: auto;
+      margin-right: 2rem;
+    }
+    &--link {
+      text-shadow: 1px 1px 0px $cleric-white;
+      color: white;
+      @include tablet {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

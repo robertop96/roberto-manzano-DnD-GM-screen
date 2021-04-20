@@ -1,10 +1,14 @@
 exports.up = function (knex) {
-  return knex.schema.createTable('profile', (table) => {
+  return knex.schema.createTable('gameSession', (table) => {
     table.increments('id').primary();
-    table.string('name').notNullable();
-    table.string('lastName').notNullable();
-    table.string('dateOfBirth').notNullable();
-    table.string('username').notNullable();
+    table
+      .integer('sheet_id')
+      .unsigned()
+      .notNullable()
+      .references('id')
+      .inTable('sheet')
+      .onUpdate('CASCADE')
+      .onDelete('CASCADE');
     table
       .integer('user_id')
       .unsigned()
@@ -17,5 +21,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropTable('profile');
+  return knex.schema.dropTable('gameSession');
 };

@@ -1,0 +1,88 @@
+@import '../../partials/partials';
+.header {
+  background-color: $cleric-blue;
+  @include tablet {
+    background-image: url('../../assets/Images/dnd-background.jpeg');
+    background-size: cover;
+  }
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-left: 1rem;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 504px;
+    margin-left: 2rem;
+  }
+  @include desktop {
+    margin-left: 5rem;
+  }
+  &__text {
+    width: 335px;
+    margin-bottom: 1rem;
+    &--title {
+      font-family: nodesto;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      @include tablet {
+        font-size: 3.5rem;
+        text-shadow: 1px 1px 0px $rogue-black;
+        color: white;
+      }
+    }
+    &--paragraph {
+      font-family: eaves;
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      @include tablet {
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 0px $rogue-black;
+        color: white;
+      }
+    }
+  }
+  &__figure {
+    margin-bottom: 1.5rem;
+    @include tablet {
+      display: none;
+    }
+    &--img {
+      width: 285px;
+      height: 285px;
+    }
+  }
+  &__call-to-action {
+    &--button {
+      background-color: #e8443c;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      @include tablet {
+        width: 200px;
+        text-align: center;
+        margin-right: auto;
+        margin-bottom: 2rem;
+      }
+    }
+    &--link {
+      font-family: nodesto;
+      font-size: 1.5rem;
+      font-weight: 100;
+      color: white;
+      @include tablet {
+        font-size: 2rem;
+      }
+    }
+  }
+}

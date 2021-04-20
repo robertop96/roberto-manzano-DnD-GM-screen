@@ -10,5 +10,17 @@ module.exports = [
     password: '123123',
     sessions: JSON.stringify(['{}']),
     sheets: JSON.stringify(['{}'])
+  },
+  {
+    email: 'notme@gmail.com',
+    password: '123123',
+    sessions: JSON.stringify(['{}']),
+    sheets: JSON.stringify(['{}'])
+  },
+  {
+    email: 'notmase@gmail.com',
+    password: '123123',
+    sessions: JSON.stringify(['{}']),
+    sheets: JSON.stringify(['{}'])
   }
 ];

@@ -7,5 +7,11 @@ module.exports = {
     password: 'Makejode96!',
     database: 'dnd',
     charset: 'utf8'
+  },
+  migrations: {
+    directory: __dirname + '/./db/migrations'
+  },
+  seeds: {
+    directory: __dirname + '/./db/seeds'
   }
 };
