@@ -1,0 +1,28 @@
+@import '../../partials/partials';
+
+.call-to-action {
+  &--button {
+    text-align: center;
+    background-color: #e8443c;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0.5rem;
+    width: 170px;
+    @include tablet {
+      width: 200px;
+      text-align: center;
+      margin-right: auto;
+      margin-bottom: 2rem;
+    }
+  }
+  &--link {
+    font-family: nodesto;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: white;
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+}

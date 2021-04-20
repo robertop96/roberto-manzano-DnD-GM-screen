@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.scss';
 import Header from '../../components/Header/Header';
 import InfoCard from '../../components/Card/Card';
+import Button from '../../components/Button/Button';
 import alley from '../../assets/Images/Dnd-alley.jpg';
 import traps from '../../assets/Images/adventure-bg.jpg';
 import lore from '../../assets/Images/wizzard-lore.jpg';
@@ -31,8 +32,11 @@ function Home() {
   return (
     <article>
       <Header />
-      <article className="cards">
+      <article className="infoCard-container">
         <InfoCard information={information} />
+        <article className="infoCard-container__button">
+          <Button text={'Get Started'} />
+        </article>
       </article>
     </article>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import hero from '../../assets/Images/guess.png';
+import Button from '../../components/Button/Button';
 
 function Header() {
   return (
@@ -20,13 +21,7 @@ function Header() {
             alt="Guess ill die logo"
           />
         </figure>
-        <section className="hero__call-to-action">
-          <div className="hero__call-to-action--button">
-            <Link className="hero__call-to-action--link" to="/signup">
-              Join the Adventure
-            </Link>
-          </div>
-        </section>
+        <Button text={'Join the Adventure'} />
       </article>
     </section>
   );
