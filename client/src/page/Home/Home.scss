@@ -1,1 +1,11 @@
 @import '../../partials/partials';
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $cleric-blue;
+  @include tablet {
+    justify-content: space-evenly;
+  }
+}
