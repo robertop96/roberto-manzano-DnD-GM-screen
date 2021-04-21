@@ -14,10 +14,10 @@ function Navbar() {
           </Link>
         </figure>
         <ul className="navbar__list">
-          <Link className="navbar__list--link" to="login">
+          <Link className="navbar__list--link" to="/sign/in">
             Login
           </Link>
-          <Link className="navbar__list--link" to="signup">
+          <Link className="navbar__list--link" to="/sign/up">
             Register
           </Link>
         </ul>
