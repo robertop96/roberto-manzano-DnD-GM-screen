@@ -35,3 +35,18 @@ $desktop: 1280px;
     font-weight: normal;
   }
 }
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin white-text {
+  color: white;
+  text-shadow: 1px 1px 0px $rogue-black;
+}

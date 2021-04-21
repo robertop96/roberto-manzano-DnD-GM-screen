@@ -1,0 +1,90 @@
+@import '../../partials/partials';
+* {
+  font-family: eaves;
+}
+.footer {
+  background-color: $wizard-red;
+  &__social {
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+      @include tablet {
+        flex-direction: row;
+        margin-left: 2rem;
+      }
+    }
+    &--title {
+      font-family: 'nodesto';
+      font-size: 3rem;
+      @include white-text;
+      margin-bottom: 2rem;
+    }
+    &--icon-wrapper {
+      @include tablet {
+        margin: 0 2rem 0 4rem;
+      }
+    }
+    &--icon {
+      margin: 0 2rem 0 0;
+    }
+    &--img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  &__info {
+    @include flex-row;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    @include tablet {
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    &--wrapper {
+      margin-bottom: 2rem;
+      width: 350px;
+      height: 200px;
+    }
+    &--title {
+      font-family: 'nodesto';
+      font-size: 2rem;
+      @include white-text;
+    }
+    &--subtitle {
+      font-size: 1.5rem;
+      @include white-text;
+    }
+    &--address {
+      font-size: 1.5rem;
+      @include white-text;
+    }
+    &--email {
+      font-size: 1.5rem;
+      @include white-text;
+      text-decoration: none;
+      &:focus,
+      &:hover,
+      &:visited,
+      &:link,
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+  &__copyright {
+    margin-left: 1rem;
+    @include white-text;
+    font-size: 1rem;
+    text-align: center;
+    width: 13.438rem;
+    margin-bottom: 2.5rem;
+    @include desktop {
+      margin-top: 2.5rem;
+      margin-left: 2rem;
+    }
+  }
+}
