@@ -6,3 +6,17 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+body {
+  font-family: eaves;
+}
+
+Link {
+  text-decoration: none;
+  &:focus {
+    color: inherit;
+  }
+  &:active {
+    color: black;
+  }
+}
