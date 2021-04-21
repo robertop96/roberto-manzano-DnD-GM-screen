@@ -17,9 +17,16 @@
     margin-bottom: 1rem;
   }
   &__input {
+    background-color: $cleric-blue;
     border-radius: 5px;
     margin-bottom: 1rem;
     width: 300px;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
     @include tablet {
       width: 348px;
     }
