@@ -1,0 +1,24 @@
+@import '../../partials/partials';
+
+.character-sheet {
+}
+
+.cs-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  &__title {
+    flex-basis: 100%;
+  }
+  &__characterInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--duo {
+      display: flex;
+    }
+  }
+}
