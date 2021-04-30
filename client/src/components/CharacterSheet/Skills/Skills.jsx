@@ -1,4 +1,4 @@
-import './CharacterStSkills.scss';
+import './Skills.scss';
 import React from 'react';
 
 function CharacterStSkills() {
@@ -32,35 +32,37 @@ function CharacterStSkills() {
   ];
 
   return (
-    <section className="saving-throw-skills">
-      <div className="misc">
-        <input
-          className="misc__input"
-          type="text"
-          name="inspiration"
-          defaultValue="0"
-        />
-        <label className="misc__label" htmlFor="inspiration">
-          Inspiration
-        </label>
-      </div>
-      <div className="misc">
-        <input
-          className="misc__input"
-          type="text"
-          name="proficiencyBonus"
-          defaultValue="0"
-        />
-        <label className="misc__label" htmlFor="proficiencyBonus">
-          proficiency
-        </label>
-      </div>
-      <article className="saving-throws">
+    <section className="skills-section">
+      <article className="misc-wrapper">
+        <div className="misc">
+          <input
+            className="misc__input"
+            type="text"
+            name="inspiration"
+            defaultValue="0"
+          />
+          <label className="misc__label" htmlFor="inspiration">
+            Inspiration
+          </label>
+        </div>
+        <div className="misc">
+          <input
+            className="misc__input"
+            type="text"
+            name="proficiencyBonus"
+            defaultValue="0"
+          />
+          <label className="misc__label" htmlFor="proficiencyBonus">
+            proficiency
+          </label>
+        </div>
+      </article>
+      <article className="saving-throws-wrapper">
         {attributes.map((savingT) => {
           return (
-            <div className="saving-throws__wrapper">
+            <div className="saving-throws">
               <input
-                className="saving-throws__input-box"
+                className="saving-throws__input-check"
                 type="checkbox"
                 name="savingT.name"
                 value="proficient"
@@ -79,12 +81,12 @@ function CharacterStSkills() {
         })}
         <h4 className="saving-throws__title">Saving Throws</h4>
       </article>
-      <article className="skills">
+      <article className="skills-wrapper">
         {skills.map((skill) => {
           return (
-            <div className="skills__wrapper">
+            <div className="skills">
               <input
-                className="skills__input-box"
+                className="skills__input-check"
                 type="checkbox"
                 name="skill.name"
                 value="proficient"

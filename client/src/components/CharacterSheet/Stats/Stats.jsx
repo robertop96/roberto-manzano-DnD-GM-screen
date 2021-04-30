@@ -1,4 +1,4 @@
-import './CharacterStats.scss';
+import './Stats.scss';
 import React from 'react';
 
 export default function CharacterInfo() {

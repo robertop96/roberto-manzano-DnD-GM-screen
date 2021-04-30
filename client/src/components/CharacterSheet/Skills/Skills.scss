@@ -1,0 +1,71 @@
+@import '../../../partials/partials';
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+}
+.misc-wrapper {
+  width: 100%;
+}
+.misc {
+  &__input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+  }
+  &__label {
+    margin-left: 1rem;
+  }
+}
+.saving-throws-wrapper {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  .saving-throws {
+    &__input-check {
+      margin-left: 0.5rem;
+    }
+    &__input-text {
+      margin-left: 0.3rem;
+      text-align: center;
+      width: 25px;
+      border: none;
+    }
+    &__label {
+      margin-top: 4px;
+      font-size: 1.2rem;
+      font-size: 0.9rem;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}
+.skills-wrapper {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  .skills {
+    &__input-check {
+      margin-left: 0.5rem;
+    }
+    &__input-text {
+      margin-left: 0.3rem;
+      text-align: center;
+      width: 25px;
+      border: none;
+    }
+    &__label {
+      margin-top: 4px;
+      font-size: 1rem;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}

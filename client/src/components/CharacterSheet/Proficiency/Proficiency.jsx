@@ -1,4 +1,4 @@
-import './CharacterSheetProf.scss';
+import './Proficiency.scss';
 
 import React from 'react';
 
