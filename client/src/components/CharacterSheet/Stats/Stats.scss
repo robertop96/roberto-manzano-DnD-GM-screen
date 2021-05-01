@@ -1,13 +1,15 @@
+@import '../../../partials/partials';
 .attributes {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: gray;
+  background-image: url(../../../assets/Images/washed3.png);
   border-radius: 10px;
-  width: 120px;
+  width: 100px;
   padding-bottom: 1rem;
   &__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,20 +24,29 @@
       font-size: 0.9rem;
     }
     &--input {
-      width: 70px;
-      height: 66px;
+      @include dnd-border;
+      width: 85px;
+      height: 80px;
       text-align: center;
       border-radius: 10px;
-      font-size: 2.5rem;
+      font-size: 2rem;
+      padding: auto;
     }
   }
   &__modifier {
     &--input {
-      width: 35px;
-      height: 35px;
+      border-radius: 100%;
+      position: absolute;
+      overflow: hidden;
+      bottom: -21px;
+      left: 28px;
+      width: 45px;
+      height: 45px;
       text-align: center;
-      border-radius: 10px;
       font-size: 1.5rem;
+      &::after {
+        @include dnd-border-circle;
+      }
     }
   }
 }

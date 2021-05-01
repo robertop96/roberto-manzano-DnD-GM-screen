@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 .csProf {
+  background-color: white;
   text-align: center;
-  border: 1px solid black;
+  @include dnd-border;
   margin-top: 1rem;
   width: 100%;
   height: 300px;

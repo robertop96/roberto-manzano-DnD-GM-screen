@@ -22,6 +22,30 @@ $desktop: 1280px;
   }
 }
 
+//** BORDER **
+@mixin dnd-border {
+  border: 12px solid transparent;
+  border-image-source: url(../assets/Images/dnd-maybe.svg);
+  border-image-slice: 10%;
+}
+
+@mixin dnd-border2 {
+  border: 5px solid transparent;
+  border-image-source: url(../assets/Images/headSquare.svg);
+  border-image-slice: 10%;
+}
+
+@mixin dnd-border-circle {
+  border: 10px solid transparent;
+  border-image-source: url(../assets/Images/headCircle.svg);
+  border-image-slice: 10%;
+}
+@mixin dnd-border-misc {
+  border: 1px solid transparent;
+  border-image-source: url(../assets/Images/misc-border.svg);
+  border-image-slice: 10%;
+}
+
 // **** FONT ****
 @mixin font-list {
   @font-face {

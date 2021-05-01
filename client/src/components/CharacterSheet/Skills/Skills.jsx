@@ -31,6 +31,17 @@ function CharacterStSkills() {
     { name: 'survival', attribute: 'wis', value: 0 }
   ];
 
+  // player {
+  //   stats {
+  //     strenth: 15,
+  //     dexterity: 10,
+  //   }
+  //   skills {
+  //     acrobatics: 5,
+  //     jump: 4:... 0
+  //   }
+  // }
+
   return (
     <section className="skills-section">
       <article className="misc-wrapper">
@@ -59,6 +70,8 @@ function CharacterStSkills() {
       </article>
       <article className="saving-throws-wrapper">
         {attributes.map((savingT) => {
+          // bring in database obj
+          //check if database has savingT.name property use on line 70 instead.
           return (
             <div className="saving-throws">
               <input

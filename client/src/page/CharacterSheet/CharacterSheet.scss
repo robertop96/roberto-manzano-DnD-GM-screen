@@ -1,10 +1,16 @@
 @import '../../partials/partials';
 
 .character-sheet {
+  background-color: $cleric-blue;
+  background-image: url(../../assets/Images/washed.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sheet-form {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -13,6 +19,25 @@
   }
   @include desktop {
     align-items: stretch;
+  }
+  &__character {
+    background-image: url(../../assets/Images/washed2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 1rem 0;
+    &--wrapper {
+      width: 348px;
+      @include tablet {
+        width: 720px;
+      }
+      @include desktop {
+        width: 1050px;
+      }
+    }
   }
   &__left-side {
     width: 348px;
