@@ -16,7 +16,8 @@
   }
 }
 .char-info-wrapper {
-  // background-color: white;
+  margin-top: 2rem;
+  background-color: white;
   @include dnd-border;
   width: 100%;
   border-radius: 10px;
