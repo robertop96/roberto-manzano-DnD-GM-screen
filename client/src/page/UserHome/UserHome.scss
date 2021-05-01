@@ -1,0 +1,64 @@
+@import '../../partials/partials';
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $cleric-blue;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(68, 64, 64, 0.5),
+      rgba(46, 43, 43, 0.5)
+    ),
+    url(../../assets/Images/HomePage.jpeg);
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+
+.welcome-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  @include tablet {
+    flex-direction: row;
+    width: 720px;
+  }
+}
+.welcome {
+  margin-top: 1rem;
+  &__title {
+    color: white;
+    width: 320px;
+  }
+  &__buttons {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    &--button {
+      width: 105px;
+      align-self: center;
+      border-radius: 5px;
+      border: none;
+      background-color: $wizard-red;
+      color: white;
+      font-family: nodesto;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin-top: 2rem;
+    }
+  }
+}
+.sessions-wrapper {
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
