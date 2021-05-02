@@ -14,7 +14,9 @@ function Signin({ handleSignin }) {
         id="password"
         name="password"
       />
-      <button className="form__button">Start Adventure</button>
+      <Link to="/roberto">
+        <button className="form__button">Start Adventure</button>
+      </Link>
       <Link className="form__forgot" to="/">
         Forgot Password?
       </Link>

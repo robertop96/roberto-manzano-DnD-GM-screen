@@ -30,10 +30,14 @@ function UserHome() {
           <h1 className="welcome__title">Welcome Roberto</h1>
         </article>
         <div className="welcome__buttons">
-          <Link to="/game/id" className="welcome__buttons--button">
+          <Link to="/game/Orlando" className="welcome__buttons--button">
             Create Game
           </Link>
-          <button className="welcome__buttons--button">Join Game</button>
+          <Link to="roberto/create">
+            <button className="welcome__buttons--button">
+              Character Sheet
+            </button>
+          </Link>
         </div>
       </article>
       <article className="sessions-wrapper">
