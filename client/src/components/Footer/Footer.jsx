@@ -21,13 +21,6 @@ function Footer() {
       role: 'Lead Developer',
       address: '3944 Terrasque Ave, Prime M. Plane',
       email: 'primalchaos@adventurer.com'
-    },
-    {
-      id: 3,
-      name: 'Roberto Pina',
-      role: 'Back End Specialist',
-      address: '999, Lady of Pain blvd, Sigil, Sigil',
-      email: 'notwelcomed@adventurer.com'
     }
   ];
 

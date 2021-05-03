@@ -1,8 +1,7 @@
 import './SpellButton.scss';
 import { Modal, Button } from 'react-bootstrap';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Spell from '../../../Modals/Spells/Spell/Spell';
-import axios from 'axios';
 
 function SpellButton({ spells }) {
   const [show, setShow] = useState(false);
@@ -18,7 +17,7 @@ function SpellButton({ spells }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} block>
         Spells
       </Button>
       <Modal show={show} onHide={handleClose}>

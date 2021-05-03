@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.scss';
 import logo from '../../assets/Images/Logo.png';
 
 function Navbar() {
+  const location = useLocation();
   return (
     <header className="header">
       <nav className="navbar">
@@ -15,7 +16,10 @@ function Navbar() {
         </figure>
         <ul className="navbar__list">
           <Link className="navbar__list--link" to="/sign/in">
-            Login
+            {location.pathname === '/sign/up' ||
+            location.pathname === '/sign/in'
+              ? 'Login'
+              : 'Logout'}
           </Link>
           <Link className="navbar__list--link" to="/sign/up">
             Register

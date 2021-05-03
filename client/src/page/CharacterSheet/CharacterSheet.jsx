@@ -6,13 +6,13 @@ import Skills from '../../components/CharacterSheet/Skills/Skills';
 import Proficiency from '../../components/CharacterSheet/Proficiency/Proficiency';
 import Defense from '../../components/CharacterSheet/Defence/Defence';
 import Features from '../../components/CharacterSheet/Features/Features';
-function CharacterSheet() {
+function CharacterSheet({ player }) {
   return (
     <section className="character-sheet">
       <form className="sheet-form">
         <div className="sheet-form__character">
           <div className="sheet-form__character--wrapper">
-            <Character />
+            <Character player={player} />
           </div>
         </div>
         <div className="sheet-form__left-side">

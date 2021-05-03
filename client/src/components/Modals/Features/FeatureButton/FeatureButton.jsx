@@ -1,8 +1,7 @@
 import './FeatureButton.scss';
 import { Modal, Button } from 'react-bootstrap';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Features from '../Feature/Feature';
-import axios from 'axios';
 
 function FeatureButton({ features }) {
   const [show, setShow] = useState(false);
@@ -18,7 +17,7 @@ function FeatureButton({ features }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} block>
         Features
       </Button>
       <Modal show={show} onHide={handleClose}>

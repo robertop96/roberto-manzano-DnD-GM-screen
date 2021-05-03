@@ -1,7 +1,6 @@
 import { Modal, Button } from 'react-bootstrap';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Monster from '../../../Modals/Monsters/Monster/Monster';
-import axios from 'axios';
 
 function MonsterButton({ monsters }) {
   const [show, setShow] = useState(false);
@@ -17,7 +16,7 @@ function MonsterButton({ monsters }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} block>
         Monsters
       </Button>
       <Modal show={show} onHide={handleClose}>

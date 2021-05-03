@@ -1,9 +1,9 @@
-import './ConditionButton.scss';
+import './CharacterSheet.scss';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
-import Condition from '../Condition/Condition';
+import CharacterSheets from '../../../page/CharacterSheet/CharacterSheet';
 
-function ConditionButton({ conditions }) {
+function CharacterSheet({ player }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -11,26 +11,26 @@ function ConditionButton({ conditions }) {
   return (
     <>
       <Button variant="primary" onClick={handleShow} block>
-        Conditions
+        {player.name}
       </Button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal dialogClassName="my-modal" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Conditions</Modal.Title>
+          <Modal.Title>{player.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <section className="conditions-wrapper">
-            {conditions?.map((condition) => {
-              return <Condition key={condition.index} condition={condition} />;
-            })}
-          </section>
+        <Modal.Body bsPrefix="cs-modal-body">
+          <CharacterSheets player={player} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
     </>
   );
 }
-export default ConditionButton;
+
+export default CharacterSheet;

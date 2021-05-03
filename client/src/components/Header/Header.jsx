@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
 import hero from '../../assets/Images/guess.png';
 import Button from '../../components/Button/Button';
 

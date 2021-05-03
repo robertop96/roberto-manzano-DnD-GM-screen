@@ -10,7 +10,7 @@ function Signin({ handleSignin }) {
       <label className="form__label">Password:</label>
       <input
         className="form__input"
-        type="text"
+        type="password"
         id="password"
         name="password"
       />

@@ -25,18 +25,20 @@ function Signup({ handleSignup }) {
       <label className="form__label">Password:</label>
       <input
         className="form__input"
-        type="text"
+        type="password"
         id="password"
         name="password"
       />
       <label className="form__label">reroll-Password:</label>
       <input
         className="form__input"
-        type="text"
+        type="password"
         id="confirm_password"
         name="confirm_password"
       />
-      <button className="form__button">Start Adventure</button>
+      <Link to="/sign/in">
+        <button className="form__button">Start Adventure</button>
+      </Link>
       <Link className="form__forgot" to="/">
         Forgot Password?
       </Link>

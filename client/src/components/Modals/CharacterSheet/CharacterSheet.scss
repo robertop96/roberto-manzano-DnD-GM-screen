@@ -1,0 +1,15 @@
+@import '../../../partials/partials';
+
+.my-modal {
+  min-width: 365px;
+  @include tablet {
+    min-width: 760px;
+  }
+  @include desktop {
+    min-width: 1100px;
+  }
+}
+
+.cs-modal-body {
+  padding: 0;
+}
