@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import './partials/partials';
 
 * {
   margin: 0;
@@ -10,14 +11,4 @@
 body {
   font-family: eaves;
   font-size: 0.5rem;
-}
-
-Link {
-  text-decoration: none;
-  &:focus {
-    color: inherit;
-  }
-  &:active {
-    color: black;
-  }
 }
