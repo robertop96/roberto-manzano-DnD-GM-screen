@@ -3,25 +3,25 @@ import { Modal, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../../Loading/Loading';
-function Feature({ feature }) {
-  const getFeature = async () => {
-    let res = await axios.get(`https://www.dnd5eapi.co${feature.url}`);
-    setDescription(res.data);
-  };
-
+function Feature({ feature, index }) {
   const [show, setShow] = useState(false);
   const [description, setDescription] = useState(null);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
-  useEffect(() => {
+  const handleShow = () => {
+    setShow(true);
+    const getFeature = async () => {
+      let res = await axios.get(
+        `https://www.dnd5eapi.co/api/features/${index}`
+      );
+      setDescription(res.data);
+    };
     getFeature();
-  }, []);
-
+  };
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {description ? feature.name : <Loading />}
+        {feature ? feature.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

@@ -4,25 +4,24 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../../Loading/Loading';
 
-function Spell({ spell }) {
-  const getSpell = async () => {
-    let res = await axios.get(`https://www.dnd5eapi.co${spell.url}`);
-    setSpellDetail(res.data);
-  };
-
+function Spell({ spell, index }) {
   const [show, setShow] = useState(false);
   const [spellDetail, setSpellDetail] = useState(null);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
-  useEffect(() => {
-    getSpell();
-  }, []);
+  const handleShow = () => {
+    setShow(true);
+    const getSpells = async () => {
+      let res = await axios.get(`https://www.dnd5eapi.co/api/spells/${index}`);
+      setSpellDetail(res.data);
+    };
+    getSpells();
+  };
 
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {spellDetail ? spellDetail?.name : <Loading />}
+        {spell ? spell?.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

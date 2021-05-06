@@ -41,6 +41,7 @@ function MonsterButton({ monsters }) {
               .map((monster) => {
                 return (
                   <Monster
+                    index={monster.index}
                     key={Math.floor(Math.random() * 10000000)}
                     monster={monster}
                   />

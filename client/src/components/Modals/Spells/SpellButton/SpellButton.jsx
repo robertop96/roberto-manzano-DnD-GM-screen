@@ -43,6 +43,7 @@ function SpellButton({ spells }) {
               .map((spell) => {
                 return (
                   <Spell
+                    index={spell.index}
                     key={Math.floor(Math.random() * 100000)}
                     spell={spell}
                   />

@@ -40,7 +40,13 @@ function FeatureButton({ features }) {
               )
               .sort()
               .map((feature) => {
-                return <Features key={feature.index} feature={feature} />;
+                return (
+                  <Features
+                    index={feature.index}
+                    key={feature.index}
+                    feature={feature}
+                  />
+                );
               })}
           </section>
         </Modal.Body>

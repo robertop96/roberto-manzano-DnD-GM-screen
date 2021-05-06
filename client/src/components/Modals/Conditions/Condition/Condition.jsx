@@ -4,29 +4,28 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../../Loading/Loading';
 
-function Condition({ condition }) {
-  const getCondition = async () => {
-    let res = await axios.get(`https://www.dnd5eapi.co${condition.url}`);
-    setDescription(res.data.desc);
-  };
-
+function Condition({ condition, index }) {
   const [show, setShow] = useState(false);
   const [description, setDescription] = useState(null);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  useEffect(() => {
+  const handleShow = () => {
+    setShow(true);
+    const getCondition = async () => {
+      let res = await axios.get(
+        `https://www.dnd5eapi.co/api/conditions/${index}`
+      );
+      setDescription(res.data.desc);
+    };
     getCondition();
-  }, []);
-
+  };
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {description ? condition.name : <Loading />}
+        {condition ? condition.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{condition.name}</Modal.Title>
+          <Modal.Title>{condition?.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {description?.map((desc) => {

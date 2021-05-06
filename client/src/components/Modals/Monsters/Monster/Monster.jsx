@@ -3,25 +3,26 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../../Loading/Loading';
 
-function Monster({ monster }) {
-  const getMonster = async () => {
-    let res = await axios.get(`https://www.dnd5eapi.co${monster.url}`);
-    setMonsterDetail(res.data);
-  };
-
+function Monster({ monster, index }) {
   const [show, setShow] = useState(false);
   const [monsterDetail, setMonsterDetail] = useState(null);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
-  useEffect(() => {
+  const handleShow = () => {
+    setShow(true);
+    const getMonster = async () => {
+      let res = await axios.get(
+        `https://www.dnd5eapi.co/api/monsters/${index}`
+      );
+      setMonsterDetail(res.data);
+    };
     getMonster();
-  }, []);
+  };
 
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {monsterDetail ? monsterDetail?.name : <Loading />}
+        {monster ? monster?.name : <Loading />}
       </Button>
 
       <Modal show={show} onHide={handleClose}>

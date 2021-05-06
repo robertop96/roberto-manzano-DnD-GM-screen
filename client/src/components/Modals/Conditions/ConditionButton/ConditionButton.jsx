@@ -21,7 +21,13 @@ function ConditionButton({ conditions }) {
         <Modal.Body>
           <section className="conditions-wrapper">
             {conditions?.map((condition) => {
-              return <Condition key={condition.index} condition={condition} />;
+              return (
+                <Condition
+                  index={condition.index}
+                  key={condition.index}
+                  condition={condition}
+                />
+              );
             })}
           </section>
         </Modal.Body>
