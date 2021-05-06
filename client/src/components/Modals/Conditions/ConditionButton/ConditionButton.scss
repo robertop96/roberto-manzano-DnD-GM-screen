@@ -4,3 +4,14 @@
   display: flex;
   flex-direction: column;
 }
+
+.modal-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  &__label {
+  }
+  &__input {
+    margin-left: 2rem;
+  }
+}
