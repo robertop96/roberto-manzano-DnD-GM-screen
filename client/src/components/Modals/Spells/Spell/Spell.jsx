@@ -2,6 +2,7 @@ import './Spells.scss';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loading from '../../../Loading/Loading';
 
 function Spell({ spell }) {
   const getSpell = async () => {
@@ -21,7 +22,7 @@ function Spell({ spell }) {
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {spellDetail?.name}
+        {spellDetail ? spellDetail?.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

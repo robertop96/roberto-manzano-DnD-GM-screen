@@ -2,6 +2,7 @@ import './Condition.scss';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loading from '../../../Loading/Loading';
 
 function Condition({ condition }) {
   const getCondition = async () => {
@@ -21,7 +22,7 @@ function Condition({ condition }) {
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {condition.name}
+        {description ? condition.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

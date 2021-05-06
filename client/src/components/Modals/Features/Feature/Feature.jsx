@@ -2,7 +2,7 @@ import './Feature';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Loading from '../../../Loading/Loading';
 function Feature({ feature }) {
   const getFeature = async () => {
     let res = await axios.get(`https://www.dnd5eapi.co${feature.url}`);
@@ -21,7 +21,7 @@ function Feature({ feature }) {
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {feature.name}
+        {description ? feature.name : <Loading />}
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

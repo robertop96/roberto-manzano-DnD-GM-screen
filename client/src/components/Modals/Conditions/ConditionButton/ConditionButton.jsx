@@ -2,6 +2,7 @@ import './ConditionButton.scss';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import Condition from '../Condition/Condition';
+import Loading from '../../../Loading/Loading';
 
 function ConditionButton({ conditions }) {
   const [show, setShow] = useState(false);

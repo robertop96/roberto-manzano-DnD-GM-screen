@@ -2,6 +2,7 @@ import './SpellButton.scss';
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import Spell from '../../../Modals/Spells/Spell/Spell';
+import Loading from '../../../Loading/Loading';
 
 function SpellButton({ spells }) {
   const [show, setShow] = useState(false);

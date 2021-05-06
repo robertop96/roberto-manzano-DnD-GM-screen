@@ -1,6 +1,7 @@
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loading from '../../../Loading/Loading';
 
 function Monster({ monster }) {
   const getMonster = async () => {
@@ -20,7 +21,7 @@ function Monster({ monster }) {
   return (
     <>
       <Button className="condition" variant="primary" onClick={handleShow}>
-        {monsterDetail?.name}
+        {monsterDetail ? monsterDetail?.name : <Loading />}
       </Button>
 
       <Modal show={show} onHide={handleClose}>
