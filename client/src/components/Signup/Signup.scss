@@ -33,14 +33,17 @@
   }
   &__button {
     align-self: center;
-    border-radius: 5px;
-    border: none;
-    background-color: $wizard-red;
-    color: white;
-    font-family: nodesto;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin-top: 2rem;
+    &--button {
+      border-radius: 5px;
+      border: none;
+      background-color: $wizard-red;
+      color: white;
+      font-family: nodesto;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin-top: 2rem;
+      margin-left: auto;
+    }
   }
   &__forgot {
     color: white;

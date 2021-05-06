@@ -10,8 +10,8 @@
       display: flex;
       flex-direction: column;
       padding-top: 1rem;
-      // margin-bottom: 2rem;
-      // margin-left: 1rem;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
       @include tablet {
         flex-direction: row;
         margin-left: 2rem;
@@ -42,9 +42,12 @@
   }
   &__info {
     @include flex-row;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     margin-left: 1rem;
     @include tablet {
+      flex-direction: row;
       justify-content: space-between;
       margin-left: 2rem;
       margin-right: 2rem;

@@ -36,8 +36,8 @@ function Signup({ handleSignup }) {
         id="confirm_password"
         name="confirm_password"
       />
-      <Link to="/sign/in">
-        <button className="form__button">Start Adventure</button>
+      <Link className="form__button" to="/sign/in">
+        <button className="form__button--button">Start Adventure</button>
       </Link>
       <Link className="form__forgot" to="/">
         Forgot Password?
