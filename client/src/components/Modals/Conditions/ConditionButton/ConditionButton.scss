@@ -10,8 +10,11 @@
   justify-content: space-between;
   align-items: baseline;
   &__label {
+    margin-left: 1rem;
   }
   &__input {
     margin-left: 2rem;
+    margin-right: 0.5rem;
+    width: 100%;
   }
 }

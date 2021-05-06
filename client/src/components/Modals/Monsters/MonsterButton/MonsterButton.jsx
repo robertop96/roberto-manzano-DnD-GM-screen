@@ -24,7 +24,14 @@ function MonsterButton({ monsters }) {
           <Modal.Title>Monsters</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input onChange={handleChange} type="text" />
+          <div className="modal-search">
+            <label className="modal-search__label">Search:</label>
+            <input
+              className="modal-search__input"
+              onChange={handleChange}
+              type="text"
+            />
+          </div>
           <section className="conditions-wrapper">
             {monsters
               ?.filter((monster) =>

@@ -27,7 +27,7 @@ function SpellButton({ spells }) {
         </Modal.Header>
         <Modal.Body>
           <div className="modal-search">
-            <label className="modal-search__label">Search</label>
+            <label className="modal-search__label">Search:</label>
             <input
               className="modal-search__input"
               onChange={handleChange}
