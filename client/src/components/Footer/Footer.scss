@@ -24,7 +24,7 @@
     }
     &--title {
       font-family: 'nodesto';
-      font-size: 1rem;
+      font-size: 1.5rem;
       @include white-text;
     }
     &--icon-wrapper {
@@ -62,13 +62,15 @@
       @include white-text;
     }
     &--subtitle {
-      font-size: 0.6rem;
+      font-size: 1rem;
       @include white-text;
     }
     &--address {
+      font-size: 1rem;
       @include white-text;
     }
     &--email {
+      font-size: 1rem;
       @include white-text;
       text-decoration: none;
       &:focus,
@@ -81,6 +83,7 @@
     }
   }
   &__copyright {
+    font-size: 1rem;
     margin-left: 1rem;
     @include white-text;
     text-align: center;
