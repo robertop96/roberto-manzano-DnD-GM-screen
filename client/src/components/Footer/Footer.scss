@@ -1,4 +1,5 @@
 @import '../../partials/partials';
+
 * {
   font-family: eaves;
 }
@@ -9,9 +10,7 @@
     &--wrapper {
       display: flex;
       flex-direction: column;
-      padding-top: 1rem;
-      margin-bottom: 2rem;
-      margin-left: 1rem;
+      padding: 1rem;
       @include tablet {
         flex-direction: row;
         margin-left: 2rem;
@@ -42,10 +41,9 @@
   }
   &__info {
     @include flex-row;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
     flex-wrap: wrap;
-    margin-left: 1rem;
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
@@ -58,7 +56,6 @@
     }
     &--wrapper {
       margin-bottom: 2rem;
-      width: 350px;
     }
     &--title {
       font-family: 'nodesto';
@@ -85,9 +82,7 @@
   &__copyright {
     margin-left: 1rem;
     @include white-text;
-    // font-size: 1rem;
     text-align: center;
-    width: 13.438rem;
     margin-bottom: 2.5rem;
     @include desktop {
       margin-top: 2.5rem;

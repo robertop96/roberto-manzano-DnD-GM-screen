@@ -1,9 +1,9 @@
+@use "./partials/partials" as *;
 @import '~bootstrap/scss/bootstrap';
 
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -16,6 +16,16 @@ Link {
   text-decoration: none;
   &:focus {
     color: inherit;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:focus {
+    text-decoration: none;
   }
   &:active {
     color: black;
