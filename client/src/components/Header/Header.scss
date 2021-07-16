@@ -4,6 +4,7 @@
   @include tablet {
     background-image: url('../../assets/Images/dnd-background.jpeg');
     background-size: cover;
+    height: 65vh;
   }
 }
 .hero {
@@ -12,7 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
   @include tablet {
     flex-direction: row;
     justify-content: space-around;
@@ -20,8 +20,8 @@
     margin-left: 1rem;
   }
   @include desktop {
+    height: 65vh;
     margin-left: 4rem;
-    height: 400px;
   }
   &__text {
     margin-bottom: 1rem;
