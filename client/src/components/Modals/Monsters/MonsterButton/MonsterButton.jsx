@@ -19,33 +19,21 @@ function MonsterButton({ monsters }) {
       <Button variant="primary" onClick={handleShow} block>
         Monsters
       </Button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="sm" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Monsters</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal-search">
             <label className="modal-search__label">Search:</label>
-            <input
-              className="modal-search__input"
-              onChange={handleChange}
-              type="text"
-            />
+            <input className="modal-search__input" onChange={handleChange} type="text" />
           </div>
           <section className="conditions-wrapper">
             {monsters
-              ?.filter((monster) =>
-                monster.name.toLowerCase().includes(search.toLowerCase())
-              )
+              ?.filter((monster) => monster.name.toLowerCase().includes(search.toLowerCase()))
               .sort()
               .map((monster) => {
-                return (
-                  <Monster
-                    index={monster.index}
-                    key={Math.floor(Math.random() * 10000000)}
-                    monster={monster}
-                  />
-                );
+                return <Monster index={monster.index} key={Math.floor(Math.random() * 10000000)} monster={monster} />;
               })}
           </section>
         </Modal.Body>

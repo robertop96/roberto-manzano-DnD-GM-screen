@@ -16,12 +16,12 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-around;
-    height: 504px;
-    margin-left: 2rem;
+    height: 350px;
+    margin-left: 1rem;
   }
   @include desktop {
-    margin-left: 5rem;
-    height: 700px;
+    margin-left: 4rem;
+    height: 400px;
   }
   &__text {
     margin-bottom: 1rem;
@@ -32,7 +32,7 @@
       margin-top: 1rem;
       margin-bottom: 1.5rem;
       @include tablet {
-        font-size: 3.5rem;
+        font-size: 2rem;
         text-shadow: 1px 1px 0px $rogue-black;
         color: white;
       }
@@ -43,7 +43,6 @@
       text-align: center;
       margin-bottom: 1rem;
       @include tablet {
-        font-size: 2.5rem;
         text-shadow: 1px 1px 0px $rogue-black;
         color: white;
       }

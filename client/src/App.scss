@@ -11,23 +11,3 @@ body {
   font-family: eaves;
   font-size: 0.5rem;
 }
-
-Link {
-  text-decoration: none;
-  &:focus {
-    color: inherit;
-  }
-  &:active {
-    color: black;
-  }
-}
-
-a {
-  text-decoration: none;
-  &:focus {
-    text-decoration: none;
-  }
-  &:active {
-    color: black;
-  }
-}

@@ -21,33 +21,21 @@ function SpellButton({ spells }) {
       <Button variant="primary" onClick={handleShow} block>
         Spells
       </Button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="sm" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Spells</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal-search">
             <label className="modal-search__label">Search:</label>
-            <input
-              className="modal-search__input"
-              onChange={handleChange}
-              type="text"
-            />
+            <input className="modal-search__input" onChange={handleChange} type="text" />
           </div>
           <section className="conditions-wrapper">
             {spells
-              ?.filter((spell) =>
-                spell.name.toLowerCase().includes(search.toLowerCase())
-              )
+              ?.filter((spell) => spell.name.toLowerCase().includes(search.toLowerCase()))
               .sort()
               .map((spell) => {
-                return (
-                  <Spell
-                    index={spell.index}
-                    key={Math.floor(Math.random() * 100000)}
-                    spell={spell}
-                  />
-                );
+                return <Spell index={spell.index} key={Math.floor(Math.random() * 100000)} spell={spell} />;
               })}
           </section>
         </Modal.Body>

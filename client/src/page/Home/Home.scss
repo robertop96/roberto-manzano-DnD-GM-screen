@@ -7,11 +7,15 @@
   background-color: $cleric-blue;
   @include tablet {
     justify-content: space-evenly;
+    padding: 0 5rem;
   }
   &__button {
     display: flex;
     flex-basis: 100%;
     justify-content: center;
     margin-bottom: 2rem;
+    @include tablet {
+      margin-bottom: 0rem;
+    }
   }
 }

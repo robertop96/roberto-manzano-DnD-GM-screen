@@ -1,5 +1,10 @@
 @import '../../../../partials/partials';
 
 .condition {
-  margin: 0.5rem;
+  width: auto;
+  margin: 0.1rem;
+  &__title {
+    font-size: 0.5rem;
+    background-color: red;
+  }
 }

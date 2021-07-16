@@ -6,11 +6,7 @@
   align-items: center;
   background-color: $cleric-blue;
   position: relative;
-  background-image: linear-gradient(
-      rgba(68, 64, 64, 0.5),
-      rgba(46, 43, 43, 0.5)
-    ),
-    url(../../assets/Images/HomePage.jpeg);
+  background-image: linear-gradient(rgba(68, 64, 64, 0.5), rgba(46, 43, 43, 0.5)), url(../../assets/Images/HomePage.jpeg);
   background-size: cover;
   padding-bottom: 3rem;
 }
@@ -52,6 +48,9 @@
       font-size: 1.5rem;
       padding: 0.5rem;
       margin-top: 2rem;
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 }

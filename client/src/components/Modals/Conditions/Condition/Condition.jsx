@@ -11,9 +11,7 @@ function Condition({ condition, index }) {
   const handleShow = () => {
     setShow(true);
     const getCondition = async () => {
-      let res = await axios.get(
-        `https://www.dnd5eapi.co/api/conditions/${index}`
-      );
+      let res = await axios.get(`https://www.dnd5eapi.co/api/conditions/${index}`);
       setDescription(res.data.desc);
     };
     getCondition();
@@ -23,7 +21,7 @@ function Condition({ condition, index }) {
       <Button className="condition" variant="primary" onClick={handleShow}>
         {condition ? condition.name : <Loading />}
       </Button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal contentClassName="modal-title" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{condition?.name}</Modal.Title>
         </Modal.Header>

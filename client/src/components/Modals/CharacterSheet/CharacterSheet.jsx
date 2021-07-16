@@ -13,7 +13,7 @@ function CharacterSheet({ player }) {
       <Button variant="primary" onClick={handleShow} block>
         {player.name}
       </Button>
-      <Modal dialogClassName="my-modal" show={show} onHide={handleClose}>
+      <Modal size="sm" dialogClassName="my-modal" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{player.name}</Modal.Title>
         </Modal.Header>

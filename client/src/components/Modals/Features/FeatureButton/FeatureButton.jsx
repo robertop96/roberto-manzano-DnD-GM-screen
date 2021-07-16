@@ -20,33 +20,21 @@ function FeatureButton({ features }) {
       <Button variant="primary" onClick={handleShow} block>
         Features
       </Button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="sm" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Features</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal-search">
             <label className="modal-search__label">Search:</label>
-            <input
-              className="modal-search__input"
-              onChange={handleChange}
-              type="text"
-            />
+            <input className="modal-search__input" onChange={handleChange} type="text" />
           </div>
           <section className="conditions-wrapper">
             {features
-              ?.filter((feature) =>
-                feature.name.toLowerCase().includes(search.toLowerCase())
-              )
+              ?.filter((feature) => feature.name.toLowerCase().includes(search.toLowerCase()))
               .sort()
               .map((feature) => {
-                return (
-                  <Features
-                    index={feature.index}
-                    key={feature.index}
-                    feature={feature}
-                  />
-                );
+                return <Features index={feature.index} key={feature.index} feature={feature} />;
               })}
           </section>
         </Modal.Body>
